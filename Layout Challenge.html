@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+		<head>
+			<meta charset="utf-8" />
+			<title>Layout Challenge Border Box Fix</title>
+			<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+			<style type="text/css">
+				#container {
+					margin-right: auto;
+					margin-left: auto;
+					width: 960px; /*width; 96%;*/
+					/*background-color: #AA4639;*/
+					padding: 10px;
+					border-radius: 10px;
+					font-size: 0; /* why is this here...inline-block causes a space between two elements(the boxes) font 0 makes it tiny....make a font size int he boxes to fix this*/
+				}
+				.box {
+					display: block;
+					width: 100%;
+					/*height: 150px;*/
+					background-color: #81BBC9;
+					/*margin: 10px;*/
+					margin-bottom: 10px;
+					/*display: inline-block; /* this line has placed the three boxes horizontally --- take it out and they will flow downwards*/ 
+					font-size: 20px; /* see note on font size in container */
+					border-radius: 10px;
+					padding: 30px 0;
+					text-align: center;
+				}
+				#sidebar {
+					width: 470px;
+					/*height: 320px;*/
+					background-color: #81BBC9;
+					/*margin: 5px;*/
+					margin-right: 10px;
+					display: inline-block; /* this line has placed the three boxes horizontally --- take it out and they will flow downwards*/ 
+					/*font-size: 20px; /* see note on font size in container */
+					border-radius: 10px;
+					margin-left: auto;
+					/*padding: 0 40px 0 40px;*/
+					padding-left: 40px;
+					padding-right: 40px;
+					-webkit-box-sizing: border-box;
+				    -moz-box-sizing: border-box;
+				    box-sizing: border-box;;
+				}
+				#content {
+					width: 470px;
+					/*height: 320px;*/
+					background-color: #81BBC9;
+					/*margin: 5px;*/
+					margin-left: 10px;
+					display: inline-block; /* this line has placed the three boxes horizontally --- take it out and they will flow downwards*/ 
+					/*font-size: 20px; /* see note on font size in container */
+					border-radius: 10px;
+					margin-left: 10px;
+					margin-right: auto;
+				/*should I use "float" to make this go to the right edge?*/
+					/*padding: 0 40px 0 40px;*/
+					padding-left: 40px;
+					padding-right: 40px;
+					-webkit-box-sizing: border-box;
+				    -moz-box-sizing: border-box;
+				    box-sizing: border-box;;					
+				}
+				p {
+					padding-bottom: 50px;
+				}
+				</style>
+		</head>
+		<body>
+			<div id="container">
+
+				<div id="header" class="box"><h1>Header</h1></div>
+
+				<div id="sidebar" class="box">
+				<h1>Subject</h1>
+				<p>I have to put text in here. I should probably put a fair bit in.  Actually I have to put in two paragrpahs.</p>
+				<p>I have to put text in here. I should probably put a fair bit in.  Actually I have to put in two paragrpahs.</p></div>
+
+				<div id="content" class="box">
+				<h1>Content</h1>
+				<p>I have to put text in here.I should probably put a fair bit in.  Actually I have to put in two paragrpahs.</p>
+				<p>I have to put text in here. I should probably put a fair bit in.  Actually I have to put in two paragrpahs.</p></div>
+
+				<div id="footer" class="box"><h1>Footer</h1></div>
+		</body>
+</html>

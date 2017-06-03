@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Box Model</title>
+		<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+		
+			#container
+			{
+				width:450px;	/*to center an element it must have a width smaller than its container*/
+				background-color:#AA4639;
+				text-align:center;
+				
+
+			}
+			.boxh{
+				width: 430px;
+				margin: 5px;
+				height: 100px;
+				background-color: #81BBC9;
+				display: inline-block;
+				border-radius: 5%;  /*set radius for all corners*/
+				border-width: 20px;
+							}
+			.boxf{
+				width: 430px;
+				margin: 5px;
+				height: 100px;
+				background-color: #81BBC9;
+				display: inline-block;
+				border-radius: 5%;  /*set radius for all corners*/
+				border-width: 20px;
+							}
+			.boxs{
+				width: 213px;
+				margin: 5px;
+				max-height: 100%;
+				background-color: #81BBC9;
+				display: inline-block;
+				border-radius: 5%;  /*set radius for all corners*/
+				padding: 20px;
+				border-width: 10px;
+				box-sizing: border-box;
+							}
+			.boxc{
+				width: 213px;
+				margin: 5px;
+				max-height: 100%;
+				background-color: #81BBC9;
+				display: inline-block;
+				border-radius: 5%;  /*set radius for all corners*/
+				border-width: 10px;
+							}
+			h1{
+				font-family: Roboto;
+  			}
+
+		</style>
+	</head>
+	<body>
+		<div id="container">
+			<div class="boxh"><h1>Header</h1></div>
+			<div class="boxs"><h1>Sidebar</h1>Add two paragraphs of placeholder text to the sidebar and content boxes. <br>What are all those hyphens and letters on the box-sizing property? The entire CSS3 specification is not fully signed off (i.e it’s not finished), which is troublesome for the browsers trying to support the new features.</div>
+			<div class="boxc"><h1>Content</h1>Add two paragraphs of placeholder text to the sidebar and content boxes. <br>The browsers, therefore, implement the features in their own way using vendor prefixes until sometime in the future when the entire CSS3 specification is complete.<br>doop deeeee doop<br>no more doop!</div>
+			<div class="boxf"><h1>Footer</h1></div>
+		</div>
+	</body>
+</html>
